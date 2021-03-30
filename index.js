@@ -96,4 +96,22 @@ bot.on('message', message => {
     }
 })
 
+bot.on('message', message => {
+
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
+
+    switch(args[0]) {
+        case 'evidence':
+            rndmessage(message);
+
+            function rndmessage(message) {
+                var messages = ['>>> __**Attorney\'s Badge**__\nType: Other\nOne of my possessions.\n\nNo one would believe I was a defense attorney if I didn\'t carry this.', '>>> __**Cindy\'s Autopsy Report**__\nType: Reports\nReceived from Mia Fey.\n\nTime of death: 7/31, 4PM-5PM\nCause of death: loss of blood due to blunt trauma.', '>>> __**Statue**__\nType: Weapons\nSubmitted as evidence by Prosecutor Payne.\n\nA statue in the shape of \"The Thinker\". It\'s rather heavy.', '>>> __**Passport**__\nType: Evidence\nSubmitted as evidence by Prosecutor Payne.\n\nThe victim apparently arrived home from Paris on 7/30, the day before the murder.', '>>> __**Blackout Record**__\nType: Documents\nSubmitted as evidence by Prosecutor Payne.\n\nElectricity to Ms. Stone\'s building was out from noon to 6 PM on the day of the crime.', '>>> __**The Thinker**__\nType: Weapons\nRetrieved at the Fey Law Office.\n\nThe murder weapon. Looks like a statue, but it\'s actually a clock. Made by Larry Butz.', '>>> __**The Thinker**__\nType: Weapons\nRetrieved at the Fey Law Office.\n\nClock in the form of a statue. The clock\'s gears have been removed. Made by Larry Butz.', '>>> __**Glass Shards**__\nType: Evidence\nRetrieved at the Fey Law Office.\n\nThe broken remains of a glass light stand. Broken beyond all recognition.', '>>> __**Receipt**__\nType: Evidence\nRetrieved at the Fey Law Office.\n\nA department store receipt with letters written in blood on the back.', '>>> __**Receipt**__\nType: Evidence\nRetrieved at the Fey Law Office.\n\nReceipt for a glass light stand. The date of purchase is the day before the murder.', '>>> __**Maya\'s Memo**__\nType: Documents\nReceived from Maya Fey.\n\n\"A conversation I had with my sister is recorded on my cell phone.\"', '>>> __**Mia\'s Autopsy Report**__\nType: Reports\nReceived from Detective Dick Gumshoe.\n\nTime of death: 9/5 at 9:00PM.\nCause: single blunt force trauma. Death was instantaneous.', '>>> __**Mia\'s Autopsy Report**__\nType: Reports\nReceived from Detective Dick Gumshoe.\n\nDied from a blow by a blunt object. May have lived for a few minutes after being hit.', '>>> __**Maya\'s Cell Phone**__\nType: Other\nReceived from Detective Dick Gumshoe.\n\nHolds a conversation between Chief and Maya.', '>>> __**Wiretap**__\nType: Evidence\nRetrieved at Gatewater Hotel.\n\nFound in Miss May\'s hotel room.', '>>> __**Floor Plans**__\nType: Map\nSubmitted as evidence during the trial.\n\nThe murder scene, the Fey & Co. Law Offices.', '>>> __**May Testimony**__\nType: Documents\nReceived from Miss April May.\n\n\"The victim dodged an attack then ran to the right, but she was caught and struck.\"', '>>> __**Photograph**__\nType: Photographs\nRetrieved at Grossberg Law Offices.\n\nOn the back the words \"DL-6 Incident - Exhibit A\" are written in pencil.', '>>> __**Photograph**__\nType: Photographs\nRetrieved at Grossberg Law Offices.\n\nOn the back the words \"DL-6 Incident - Exhibit B\" are written in pencil.', '>>> __**Bellboy\'s Affidavit**__\nType: Documents\nReceived from the bellboy.\n\nDescribes the man who stayed with Miss May in the hotel on the night of the murder.', '>>> __**Newspaper Clipping**__\nType: Other\nRetrieved at Fey Law Offices.\n\nArticle about politician\'s suicide. The word \"White\" is written in pen at the top.', '>>> __**Mia\'s Memo**__\nType: Documents\nReceived from Mia Fey.\n\nA list of people\'s names in Mia\'s handwriting.'];
+                var rnd = Math.floor(Math.random() * messages.length);
+
+                message.channel.send(messages[rnd]);
+            }
+        break;
+    }
+})
+
 bot.login(process.env.token);
