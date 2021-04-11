@@ -8,12 +8,13 @@ exports.run = async (bot,message,args) => {
     .setDescription('A generic Discord bot for Ace Attorney-themed servers. Includes content from AA1-AA6, AAI and AAI2.')
     .setThumbnail('https://i.imgur.com/MdCBJP9.png')
     .addFields(
-        { name: 'generate', value: 'Names a character.', inline: true },
+        { name: 'character', value: 'Names a character.', inline: true },
         { name: 'horace', value: 'Quotes Horace Knightley.', inline: true },
         { name: 'dl-6', value: 'Says the thing.', inline: true },
         { name: 'mainsub', value: 'Fetches posts from r/AceAttorney.', inline: true },
         { name: 'circlejerk', value: 'Fetches posts from r/AceAttorneyCirclejerk.', inline: true },
         { name: 'fact', value: 'Says an Ace Attorney fact.', inline: true },
+        { name: 'ost', value: 'Links an Ace Attorney song.', inline: true},
     )
     .setTimestamp()
     .setFooter('...Horace Knightley.', 'https://i.imgur.com/xtEi0sD.png');
@@ -22,5 +23,5 @@ exports.run = async (bot,message,args) => {
 }
 
 exports.help = {
-    name: 'testembed'
+    name: 'help'
 }
