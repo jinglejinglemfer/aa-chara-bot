@@ -5,7 +5,7 @@ exports.run = async (bot,message,args) => {
     .setColor('#F8C300')
     .setTitle('*\"Hm? Whaddaya want?\"*')
     .setAuthor('KnightleyBot', 'https://i.imgur.com/xtEi0sD.png', 'https://discord.com/api/oauth2/authorize?client_id=824018254812282881&permissions=0&scope=bot')
-    .setDescription('A generic Discord bot for Ace Attorney-themed servers. Includes content from AA1-AA6, AAI and AAI2.')
+    .setDescription('A generic Discord bot for Ace Attorney-themed servers. Includes content from AA1-AA6, AAI-AAI2, and the Ace Attorney anime.')
     .setThumbnail('https://i.imgur.com/MdCBJP9.png')
     .addFields(
         { name: 'character', value: 'Names a character.', inline: true },
