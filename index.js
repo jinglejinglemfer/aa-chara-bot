@@ -133,7 +133,7 @@ bot.on('message', message => {
 })
 
 bot.on("message", (message) => {
-    if (message.content.includes('chess')) {
+    if (message.content.toLowerCase().includes('chess')) {
       message.channel.send("https://i.imgur.com/QE2QZGW.png");
     }
   });
