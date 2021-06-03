@@ -101,7 +101,7 @@ bot.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
 
     switch(args[0]) {
-        case 'evidence':
+        case 'evidnotdone':
             rndmessage(message);
 
             function rndmessage(message) {
