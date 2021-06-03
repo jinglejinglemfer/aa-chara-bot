@@ -132,5 +132,10 @@ bot.on('message', message => {
     }
 })
 
+bot.on("message", (message) => {
+    if (message.content == "chess") {
+      message.channel.send("https://i.imgur.com/QE2QZGW.png");
+    }
+  });
 
 bot.login(process.env.token);
