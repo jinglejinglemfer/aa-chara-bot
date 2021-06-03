@@ -140,6 +140,24 @@ bot.on("message", (message) => {
     if (message.content.toLowerCase().includes('pawn')) {
         message.channel.send("https://i.imgur.com/ra7Sklp.png");
     }
+    if (message.content.toLowerCase().includes('king')) {
+        message.channel.send("https://i.imgur.com/THco3e6.png");
+    }
+    if (message.content.toLowerCase().includes('knight')) {
+        message.channel.send("https://i.imgur.com/FmJlNxc.png");
+    }
+    if (message.content.toLowerCase().includes('checkmate')) {
+        message.channel.send("https://i.imgur.com/izVClPy.png");
+    }
+    if (message.content.toLowerCase().includes('bishop')) {
+        message.channel.send("https://i.imgur.com/Mx715TF.png");
+    }
+    if (message.content.toLowerCase().includes('queen')) {
+        message.channel.send("https://i.imgur.com/GvoDgFK.png");
+    }
+    if (message.content.toLowerCase().includes('rook')) {
+        message.channel.send("https://i.imgur.com/O1riV8p.png");
+    }
   });
 
 bot.login(process.env.token);
