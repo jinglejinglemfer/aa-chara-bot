@@ -137,6 +137,9 @@ bot.on("message", (message) => {
     if (message.content.toLowerCase().includes('chess')) {
       message.channel.send("https://i.imgur.com/QE2QZGW.png");
     }
+    if (message.content.toLowerCase().includes('pawn')) {
+        message.channel.send("https://i.imgur.com/ra7Sklp.png");
+    }
   });
 
 bot.login(process.env.token);
