@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client();
+const client = new Discord.Client({ intents: [MESSAGE_CREATE, MESSAGE_UPDATE] })
 const fs = require("fs");
 const { brotliCompress } = require('zlib');
 const prefix = 'aa!';
@@ -8,7 +8,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
     console.log('Bot online')
-    bot.user.setActivity('My prefix is \'aa!\'.', { type:'LISTENING'}).catch(console.error);
+    bot.user.setActivity('chess', { type:'PLAYING'}).catch(console.error);
 
     fs.readdir('./commands', (err, files) => {
         if(err) return console.log(err);
@@ -36,8 +36,8 @@ bot.on('message', (message) => {
     let commandfile = bot.commands.get(cmd);
     if(commandfile) {commandfile.run(bot,message,args)}
 
-    if(cmd == 'oldhelp') {
-        message.channel.send('**This bot was made to randomly name a character from the Ace Attorney series.**\n\nIt includes characters from *Ace Attorney, Justice for All, Trials & Tribulations, Apollo Justice, Dual Destinies, Spirit of Justice, Investigations* and *Investigations 2*.\nAs of now, characters from *DGS, DGS 2* and *PLvsPW* aren\'t included.\n\n__Commands:__\n\n**Generate**: Names a random character.\n**Horace**: Says a random quote from Horace Knightley. Self-indulgent nonsense on my part.\n**DL-6**: \"Almost Christmas\" means it wasn\'t Christmas!\n**Help**: This is the help command. Yeaaaah.\n**Circlejerk**: Awful, just terrible.\n**Mainsub**: The main Ace Attorney subreddit. Was suggested to me by Luke.\n**Fact**: Says an Ace Attorney fact. Taken from @AA_Facts on Twitter.\n\nIf you want to tell me how much my bot sucks, you can contact me via social media.\nMy Discord tag is ZOMBOTIC#0424, and my Twitter account is @onlydebeste.\nI\'ve never coded anything in my life, so that\'s why the bot looks \"like this\".')
+    if(cmd == 'icp reference') {
+        message.channel.send('Has it not occurred to you that the voice you\'ve read my post in is in fact the voice in your head? It\'s your voice, it bears your tone, and your judgement values. How about this: Why are you being a little bitch? I am the patriarch of redditarian gang banging, Simon. Do you not know who I am? I am desperately lonely. Are you trying to be my friend? Because you\'ve got an interesting way of going about it. I\'m ok with this, I can work with this, this is what we do. I do this. (That\'s an ICP reference. Get it?) Or am I wrong? Are you hurt or offended by something I said? Have I wronged you somehow? Are you upset? Do you feel trolled? As your friend, I feel obliged to inform you that if you said "yes" to any of these questions, you might be misattributing things to me which do not exist. If you don\'t understand what that means, how about don\'t sit there and tell me I\'m both somehow subjective and also wrong. You can\'t have it both ways. So what\'s it going to be, chummer? I am The House. And The House says the door is open. Are you going to walk in here, fuck my shit up, and steal my properties? Ok, that\'s rude. We could also just chill. If I think I\'m someone who thinks they\'re deeper than they actually are, then clearly I must dig deeper. I died once, true story. Listen... everything I\'ve said in this thread... you must read in a voice with a friendly tone. And before you interrupted me, a youthful jubilence. You\'re abrasive, I\'m sure you already know that. I understand I can be abrasive as well. I can understand you, I need you to understand me. If you don\'t understand me, we can\'t be friends. If we can\'t be friends, then you best get to stepping because you\'re in my way. Are you good?')
     }
 })
 
