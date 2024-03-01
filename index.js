@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const client = new Discord.Client({ intents: [MESSAGE_CREATE, MESSAGE_UPDATE] })
+const bot = new Discord.Client({ intents: [MESSAGE_CREATE, MESSAGE_UPDATE] })
 const fs = require("fs");
 const { brotliCompress } = require('zlib');
 const prefix = 'aa!';
