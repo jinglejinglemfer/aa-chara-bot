@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const { Client, Intents } = require('discord.js');
-const bot = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] })
+const bot = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] })
 const fs = require("fs");
 const { brotliCompress } = require('zlib');
 const prefix = 'aa!';
@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
     console.log('Bot online')
-    bot.user.setActivity('chess', { type:'PLAYING'}).catch(console.error);
+    bot.user.setActivity('chess', { type: 'PLAYING'}).catch(console.error);
 
     fs.readdir('./commands', (err, files) => {
         if(err) return console.log(err);
